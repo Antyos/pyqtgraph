@@ -694,7 +694,7 @@ class ImageView(QtWidgets.QWidget):
             image.view(np.ndarray), img=self.imageItem, axes=axes,
             returnMappedCoords=True)
 
-        if data is None:
+        if data is None or data.size == 0:
             return
 
         # Convert extracted data into 1D plot data
